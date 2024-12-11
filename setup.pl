@@ -10,7 +10,8 @@ sub showEnv {
 
 my %env_vars = ( 
 	'Path' => '/usr/bin:/usr/local/bin',
-        'Home' => '/home/avaidyanathan'
+        'Home' => '/home/avaidyanathan',
+	'TmpHome' => '/tmp/home'
 );
 
 showEnv(\%env_vars);
