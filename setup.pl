@@ -3,10 +3,15 @@
 use strict;
 use warnings;
 
-my $env_vars = {
-	'Path' => '/usr/bin:/usr/local/bin'
-};
+sub showEnv {
+	my $env = shift;
+	print $env->{'Path'} . "\n";
+}
 
-print $env_vars->{'Path'} . "\n";
+my %env_vars = ( 
+	'Path' => '/usr/bin:/usr/local/bin'
+);
+
+showEnv(\%env_vars);
 
 exit 0;
