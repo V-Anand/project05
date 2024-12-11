@@ -9,9 +9,14 @@ sub showEnv {
 }
 
 my %env_vars = ( 
-	'Path' => '/usr/bin:/usr/local/bin'
+	'Path' => '/usr/bin:/usr/local/bin',
+        'Home' => '/home/avaidyanathan'
 );
 
 showEnv(\%env_vars);
+
+while (my ($key, $val) = each(%env_vars)) {
+    print $key . " -> " . $val . "\n";
+}
 
 exit 0;
