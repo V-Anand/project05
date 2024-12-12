@@ -5,7 +5,10 @@ use warnings;
 
 sub showEnv {
 	my $env = shift;
-	print $env->{'Path'} . "\n";
+	my @keys = keys %{ $env };
+	foreach my $key (@keys) {
+	    print $key . "\n";
+	}
 }
 
 my %env_vars = ( 
@@ -19,5 +22,7 @@ showEnv(\%env_vars);
 while (my ($key, $val) = each(%env_vars)) {
     print $key . " -> " . $val . "\n";
 }
+
+print "Done. \n";
 
 exit 0;
