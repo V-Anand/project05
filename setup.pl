@@ -15,4 +15,6 @@ my %env_vars = (
 
 showEnv(\%env_vars);
 
+print "Done. \n";
+
 exit 0;
